@@ -3,147 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Magic</title>
-    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de que la ruta sea correcta -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
-
-    <!-- Agregar el favicon -->
-    <link rel="icon" href="Logo.jpeg" type="image/jpeg">
-
+    <title>Chat con Nosotros</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/08/11/Casino-banner-Casino-Background-Graphics-35985674-1.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        header {
-            background-color: rgb(253, 215, 0);
-            padding: 20px;
             text-align: center;
-            width: 100%;
-            position: absolute;
-            top: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #222;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            background-image: url('https://example.com/casino-background.jpg'); /* Agrega una imagen de fondo relacionada con casino */
+            background-size: cover;
         }
         h1 {
-            color: #333;
-            animation: slideIn 1s ease-out;
+            color: #f2c94c;
+            font-size: 36px;
+            font-weight: bold;
         }
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        p {
+            color: #ccc;
+            font-size: 18px;
         }
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 100px;
+        .highlight {
+            color: #e74c3c;  /* Color rojo brillante */
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
         }
-        section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .button {
-            background-color: #000000c4;
-            color: rgb(255, 218, 8);
-            padding: 10px 20px;
+        .chat-button {
+            background-color: #e74c3c;
+            color: white;
             border: none;
-            border-radius: 5px;
+            padding: 15px 20px;
             font-size: 16px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            width: 100%;
-            justify-content: center;
-            transition: transform 0.3s ease-in-out;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
-        .button i {
-            margin-right: 8px;
+        .chat-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
         }
-        .play-button {
-            margin-top: 20px;
+        .chat-button:active {
+            transform: scale(0.98);
         }
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 0;
-            position: relative;
+        .platforms-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            color: #fff;
         }
-        /* Estilo para el botón "Chatea con nosotros" con efecto de "breathing" */
-        .chat-button {
-            animation: breathing 2s infinite ease-in-out;
+        .platforms-section h2 {
+            color: #f2c94c;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
-        @keyframes breathing {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .platforms-section p {
+            color: #ccc;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .platform-link {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .platform-link:hover {
+            color: #f2c94c;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>¡Bienvenidos a Golden Magic!</h1>
+        <p>Para resolver tus dudas o <span class="highlight">cargar saldo</span>, haz clic en el botón de abajo para iniciar el chat con nosotros.</p>
+        <button class="chat-button" onclick="abrirChat()">💬 Habla con Nosotros</button>
+    </div>
+
+    <!-- Start of Platforms Section -->
+    <div class="platforms-section">
+        <h2>🌟 Plataformas</h2>
+        <p>¡Descubre nuestras plataformas! 🚀</p>
+        <p><strong>Regalamonedas</strong> te triplica todas tus cargas 💸 y te ofrece una experiencia única. <a href="https://regalamonedas.net" class="platform-link" target="_blank">¡Regalamonedas! 🏆</a></p>
+        <p><strong>Ganamos</strong> cuenta con casino en vivo 🎰, juegos emocionantes y más. <a href="https://www.ganamos.bet/home" class="platform-link" target="_blank">¡Ganamos! 💰</a></p>
+    </div>
+    <!-- End of Platforms Section -->
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/670dd3674304e3196ad19d4f/1ia703jt2';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/67831b2a49e2fd8dfe063c97/1ihc24852';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
+
+        // Función para abrir directamente el chat
+        function abrirChat() {
+            if (typeof Tawk_API !== "undefined") {
+                Tawk_API.maximize();
+            } else {
+                alert("El chat aún no está disponible. Por favor, espera unos segundos e inténtalo nuevamente.");
+            }
+        }
     </script>
     <!--End of Tawk.to Script-->
-    <header>
-        <h1>Bienvenidos a Golden Magic</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Cargar Fichas</h2>
-            <p><b>Mínimo de carga: $1000</b></p>
-
-            <div class="info">
-                <p><b>TRIPLICAMOS TODAS TUS CARGAS:</b></p>
-                <p>$1000 -> $3000</p>
-                <p>$2000 -> $6000</p>
-                <p>Y así sucesivamente...</p>
-                <p>Para crear usuario y/o cargar fichas, haz clic en el botón <b>"Chatea con nosotros"</b></p>
-
-                <!-- Botón de Tawk.to para "Chatea con nosotros" con efecto de breathing -->
-                <button class="button chat-button" onclick="Tawk_API.toggle()">
-                    <i class="fas fa-comments"></i> Chatea con nosotros
-                </button>
-
-                <a href="https://regalamonedas.net" target="_blank" class="play-button">
-                    <button class="button">
-                        <i class="fas fa-gem"></i> JUGAR AHORA
-                    </button>
-                </a>
-            </div>
-        </section>
-    </main>
 </body>
 </html>
