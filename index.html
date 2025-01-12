@@ -3,126 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat con Nosotros</title>
+    <title>Aplicación de Fichas</title>
+    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de que la ruta sea correcta -->
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/08/11/Casino-banner-Casino-Background-Graphics-35985674-1.png');
+            background-size: cover; /* Asegura que la imagen cubra toda la página */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center; /* Centra la imagen en la página */
+            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
+            display: flex; /* Flexbox para estructurar el layout */
+            flex-direction: column; /* Dirección de los elementos en columna */
+            justify-content: center; /* Centra el contenido verticalmente */
+            align-items: center; /* Centra el contenido horizontalmente */
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #222;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            padding: 20px;
-            background-image: url('https://example.com/casino-background.jpg'); /* Agrega una imagen de fondo relacionada con casino */
-            background-size: cover;
+        header {
+            background-color: rgb(253, 215, 0); /* Fondo semi-transparente */
+            padding: 20px; /* Espaciado interno */
+            text-align: center; /* Centrar el texto */
+            width: 100%; /* Asegura que el header ocupe todo el ancho */
+            position: absolute; /* Permite que el header esté siempre en la parte superior */
+            top: 0; /* Posición en la parte superior */
+           
         }
+       
+        
         h1 {
-            color: #f2c94c;
-            font-size: 36px;
-            font-weight: bold;
+            color: #333;
         }
-        p {
-            color: #ccc;
-            font-size: 18px;
+        main {
+            flex: 1; /* Permite que el main ocupe el espacio restante */
+            display: flex; /* Flexbox para centrar la sección */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
         }
-        .highlight {
-            color: #e74c3c;  /* Color rojo brillante */
-            font-weight: bold;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-        .chat-button {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 15px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            font-weight: bold;
-            text-transform: uppercase;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .chat-button:hover {
-            background-color: #c0392b;
-            transform: scale(1.05);
-        }
-        .chat-button:active {
-            transform: scale(0.98);
-        }
-        .platforms-section {
-            margin-top: 40px;
+        section {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para la sección */
             padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centrar el texto dentro de la sección */
+            width: 300px; /* Ancho fijo para el cuadrado */
         }
-        .platforms-section h2 {
-            color: #f2c94c;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        .platforms-section p {
-            color: #ccc;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .platform-link {
-            color: #e74c3c;
-            font-weight: bold;
-            font-size: 20px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .platform-link:hover {
-            color: #f2c94c;
+      
+       
+        footer {
+            margin-top: 20px;
+            text-align: center; /* Centrar el texto del pie de página */
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el footer */
+            padding: 10px 0; /* Espaciado interno */
+            position: relative; /* Permite que el footer esté al final de la página */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>¡Bienvenidos a Golden Magic!</h1>
-        <p>Para resolver tus dudas o <span class="highlight">cargar saldo</span>, haz clic en el botón de abajo para iniciar el chat con nosotros.</p>
-        <button class="chat-button" onclick="abrirChat()">💬 Habla con Nosotros</button>
-    </div>
-
-    <!-- Start of Platforms Section -->
-    <div class="platforms-section">
-        <h2>🌟 Plataformas</h2>
-        <p>¡Descubre nuestras plataformas! 🚀</p>
-        <p><strong>Regalamonedas</strong> te triplica todas tus cargas 💸 y te ofrece una experiencia única. <a href="https://regalamonedas.net" class="platform-link" target="_blank">¡Regalamonedas! 🏆</a></p>
-        <p><strong>Ganamos</strong> cuenta con casino en vivo 🎰, juegos emocionantes y más. <a href="https://www.ganamos.bet/home" class="platform-link" target="_blank">¡Ganamos! 💰</a></p>
-    </div>
-    <!-- End of Platforms Section -->
-
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/67831b2a49e2fd8dfe063c97/1ihc24852';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-
-        // Función para abrir directamente el chat
-        function abrirChat() {
-            if (typeof Tawk_API !== "undefined") {
-                Tawk_API.maximize();
-            } else {
-                alert("El chat aún no está disponible. Por favor, espera unos segundos e inténtalo nuevamente.");
-            }
-        }
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/670dd3674304e3196ad19d4f/1ia703jt2';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
     </script>
     <!--End of Tawk.to Script-->
+    <header>
+        <h1>Bienvenidos a Golden Magic</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Cargar Fichas</h2>
+            <p> <b> Mínimo de carga: $1000</b></p>
+            <p>Para cargar presione el icono de abajo a la derecha:</p>
+            
+            <div class="info">
+              
+                <p><b>TRIPLICAMOS TODAS TUS CARGAS:</b></p>
+                <p>$1000 -> $3000</p>
+                <p>$2000 -> $6000</p>
+                <p>Y así sucesivamente...</p>
+            </div>
+        </section>
+    </main>
+   
 </body>
 </html>
