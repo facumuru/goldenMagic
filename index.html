@@ -11,86 +11,117 @@
             margin: 0;
             padding: 0;
             background-image: url('https://www.creativefabrica.com/wp-content/uploads/2022/08/11/Casino-banner-Casino-Background-Graphics-35985674-1.png');
-            background-size: cover; /* Asegura que la imagen cubra toda la página */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            background-position: center; /* Centra la imagen en la página */
-            min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la ventana */
-            display: flex; /* Flexbox para estructurar el layout */
-            flex-direction: column; /* Dirección de los elementos en columna */
-            justify-content: center; /* Centra el contenido verticalmente */
-            align-items: center; /* Centra el contenido horizontalmente */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         header {
-            background-color: rgb(253, 215, 0); /* Fondo semi-transparente */
-            padding: 20px; /* Espaciado interno */
-            text-align: center; /* Centrar el texto */
-            width: 100%; /* Asegura que el header ocupe todo el ancho */
-            position: absolute; /* Permite que el header esté siempre en la parte superior */
-            top: 0; /* Posición en la parte superior */
-           
+            background-color: rgb(253, 215, 0);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 0;
         }
-       
-        
         h1 {
             color: #333;
         }
         main {
-            flex: 1; /* Permite que el main ocupe el espacio restante */
-            display: flex; /* Flexbox para centrar la sección */
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         section {
-            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para la sección */
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Centrar el texto dentro de la sección */
-            width: 300px; /* Ancho fijo para el cuadrado */
+            text-align: center;
+            width: 300px;
         }
-      
-       
+        .chat-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+        .chat-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+        .chat-button:active {
+            transform: scale(0.98);
+        }
         footer {
             margin-top: 20px;
-            text-align: center; /* Centrar el texto del pie de página */
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el footer */
-            padding: 10px 0; /* Espaciado interno */
-            position: relative; /* Permite que el footer esté al final de la página */
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            position: relative;
         }
     </style>
 </head>
 <body>
     <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/670dd3674304e3196ad19d4f/1ia703jt2';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/670dd3674304e3196ad19d4f/1ia703jt2';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
     <!--End of Tawk.to Script-->
+
     <header>
         <h1>Bienvenidos a Golden Magic</h1>
     </header>
     <main>
         <section>
             <h2>Cargar Fichas</h2>
-            <p> <b> Mínimo de carga: $1000</b></p>
-            <p>Para cargar presione el icono de abajo a la derecha:</p>
+            <p><b>Mínimo de carga: $1000</b></p>
             
+
             <div class="info">
-              
-                <p><b>TRIPLICAMOS TODAS TUS CARGAS:</b></p>
+                <p><b>REGALAMONEDAS TRIPLICA TODAS TUS CARGAS:</b></p>
                 <p>$1000 -> $3000</p>
                 <p>$2000 -> $6000</p>
                 <p>Y así sucesivamente...</p>
             </div>
+
+            <!-- Botón para abrir el chat de Tawk.to -->
+            <button class="chat-button" onclick="abrirChat()">💬 Habla con Nosotros</button>
         </section>
     </main>
-   
+
+    
+
+    <!-- Función para abrir el chat de Tawk.to -->
+    <script>
+        function abrirChat() {
+            if (typeof Tawk_API !== "undefined") {
+                Tawk_API.maximize();
+            } else {
+                alert("El chat aún no está disponible. Por favor, espera unos segundos e inténtalo nuevamente.");
+            }
+        }
+    </script>
 </body>
 </html>
